@@ -1,1 +1,10 @@
-{"version":2,"name":"princealikhan.me","builds":[{"src":"package.json","use":"@now/next"}]}
+{
+    "version":2,
+    "name":"princealikhan.me",
+    "builds":[
+        {
+            "src":"package.json",
+            "use":"@now/next"
+        }
+    ]
+}

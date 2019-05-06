@@ -1,0 +1,34 @@
+{
+    "name": "XXX",
+    "short_name": "MUI",
+    "display": "minimal-ui",
+    "start_url": "/",
+    "theme_color": "#2196f3",
+    "background_color": "#ffffff",
+    "icons": [
+        {
+            "src": "/static/icons/logo.png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "/static/icons/logo.png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/static/icons/logo.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/static/icons/logo.png",
+            "sizes": "256x256"
+        },
+        {
+            "src": "/static/icons/logo.png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "/static/icons/logo.png",
+            "sizes": "512x512"
+        }
+    ]
+}
