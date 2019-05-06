@@ -1,6 +1,7 @@
 {
     "version":2,
     "name":"princealikhan.me",
+    "alias": "princealikhan.me",
     "builds":[
         {
             "src":"package.json",
