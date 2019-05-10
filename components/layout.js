@@ -1,0 +1,141 @@
+import { Component } from "react";
+import Link from "next/link";
+
+import IconButton from '@material-ui/core/IconButton';
+
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import Hidden from '@material-ui/core/Hidden';
+
+const drawerWidth = 80;
+import DeleteForeverTwoToneIcon from '@material-ui/icons/DeleteForeverTwoTone';
+import HomeRounded from '@material-ui/icons/HomeRounded';
+
+const styles = theme => ({
+  root: {
+    display: 'flex',
+  },
+  drawer: {
+    [
+      theme.breakpoints.up('sm')
+    ]: {
+      width: drawerWidth,
+      flexShrink: 0,
+    },
+  },
+  drawerPaper: {
+    width: drawerWidth,
+    justifyContent: 'space-between',
+    background: '#0a0f14',
+    borderRight: '1px solid #02070e'
+  },
+  menuButton: {
+    marginRight: 20,
+    [
+      theme.breakpoints.up('sm')]: {
+      display: 'none',
+    },
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing.unit * 3,
+  },
+  mainNav: {
+    marginTop: 18,
+    marginBottom: 18,
+    textAlign: 'center',
+    '&.div': {
+      background: 'red',
+      margin: 8
+    }
+  }
+});
+
+class Layout extends Component {
+
+  state = {
+    mobileOpen: false,
+  };
+
+  handleDrawerToggle = () => {
+    this.setState(state => ({ mobileOpen: !state.mobileOpen }));
+  };
+
+
+  render() {
+    const { children, classes, theme } = this.props
+    
+    const drawerMenu = (
+      <>
+        <div className={classes.mainNav}>
+          {['Home', 'About', 'Skill', 'Work', 'Open Source', 'Contact'].map((text, index) => (
+            <div>
+              <HomeRounded style={{ fontSize: 30 }}/>
+            </div>
+          ))}
+        </div>
+        <div>
+          {['Facebook','Twitter'].map((text, index) => (
+            <div>
+              {text}
+            </div>
+          ))}
+        </div>
+      </>
+    );
+
+    return (
+      
+      <section className={classes.root}>
+        <DeleteForeverTwoToneIcon 
+          onClick={this.handleDrawerToggle}
+          className={classes.menuButton}
+          />
+        
+        <nav className={classes.drawer}>
+          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+          <Hidden smUp implementation="css">
+            <Drawer
+              container={this.props.container}
+              variant="temporary"
+              anchor="left"
+              open={this.state.mobileOpen}
+              onClose={this.handleDrawerToggle}
+              classes={{
+                paper: classes.drawerPaper,
+              }}>
+              { drawerMenu }
+            </Drawer>
+          </Hidden>
+          <Hidden xsDown implementation="css">
+            <Drawer
+              classes={{
+                paper: classes.drawerPaper,
+              }}
+              variant="permanent"
+              open
+            >
+              {drawerMenu}
+            </Drawer>
+          </Hidden>
+        </nav>
+
+        {/* Pages Component Inject here */}
+        <main className={classes.content}>
+          {children}
+        </main>
+      </section>
+    );
+  }
+  
+}
+Layout.propTypes = {
+  classes: PropTypes.object.isRequired,
+  // Injected by the documentation to work in an iframe.
+  // You won't need it on your project.
+  container: PropTypes.object,
+  theme: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles, { withTheme: true })(Layout);
