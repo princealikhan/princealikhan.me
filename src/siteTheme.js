@@ -7,9 +7,13 @@ export const siteTheme = {
         }   
     },
     palette: {
+        type: 'dark',
+        background: {
+            default: "#0f1017"
+        },
         primary: {
           light: '#A985CF',
-          main: '#79589F',
+          main: '#0a0f14',
           dark: '#4B2E6F',
           contrastText: '#fff',
         },
@@ -58,7 +62,6 @@ export const siteTheme = {
     shape: {
         borderRadius: 4
     },
-    
     typography: {
         fontFamily: [
         'Source Sans Pro',
