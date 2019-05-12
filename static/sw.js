@@ -9,14 +9,13 @@ var filesToCache = [
     '/static/icons/favicon-256.png',
     '/static/icons/favicon-384.png',
     '/static/icons/favicon-512.png',
-    '/static/icons/base.css'
+    '/static/base.css'
  ];
  self.addEventListener('install', function(event) {
     // Perform install steps
     event.waitUntil(
       caches.open(cacheName)
         .then(function(cache) {
-          console.log('Opened cache');
           return cache.addAll(filesToCache);
         })
     );
