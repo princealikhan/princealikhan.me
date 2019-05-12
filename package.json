@@ -10,7 +10,7 @@
     "start": "next start -p $PORT",
     "build": "next build",
     "dev": "next",
-    "now-build": "next build && next export -o dist"
+    "now-build": "next build"
   },
   "dependencies": {
     "@material-ui/core": "latest",
