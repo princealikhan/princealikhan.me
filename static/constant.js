@@ -8,12 +8,12 @@ export const siteData = {
         {
             title: 'Home',
             path: '/',
-            icon: (<HomeRounded/>)
+            icon: (<Icon className={'fas fa-home'} style={{ fontSize:20 }}/>)
         },
         {
             title: 'About',
             path: '/about',
-            icon: (<HomeRounded/>)
+            icon: (<Icon className={'fas fa-info-circle'} style={{ fontSize:20 }}/>)
         }
     ],
     socialNav: [

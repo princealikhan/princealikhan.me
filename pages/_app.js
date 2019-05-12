@@ -24,7 +24,8 @@ class MyApp extends App {
   }
 
   render() {
-    const { Component, pageProps, title } = this.props;
+    const { Component, pageProps, router } = this.props;
+
     return (
       <Container>
         <Head>
@@ -45,7 +46,7 @@ class MyApp extends App {
 
             {/* Layout Wrapper */}
             <Layout>
-              <Component pageContext={this.pageContext} {...pageProps} />
+              <Component pageContext={this.pageContext} {...this.props} />
             </Layout>
             {/* End Layout Wrapper */}
 
