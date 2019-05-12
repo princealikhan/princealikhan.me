@@ -20,8 +20,9 @@ class MyDocument extends Document {
           />
 
           {/* PWA primary color */}
+          <link rel="manifest" href="/static/manifest.json" />
           <meta name="theme-color" content={pageContext.theme.palette.primary.main} />
-          <link rel="shortcut icon" href="/static/logo.png" />
+          <link rel="shortcut icon" href="/static/icons/favicon-48.png" />
           <link rel="stylesheet" href="/static/base.css" />
 
           <link rel="canonical" href={canonical} />
