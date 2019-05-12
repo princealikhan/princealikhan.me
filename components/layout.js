@@ -1,16 +1,14 @@
 import { Component } from "react";
 import Link from "next/link";
-
-import IconButton from '@material-ui/core/IconButton';
-
+import cx from 'classnames';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
+import { siteData } from '../static/constant';
+import Router from 'next/router';
 
 const drawerWidth = 80;
-import DeleteForeverTwoToneIcon from '@material-ui/icons/DeleteForeverTwoTone';
-import HomeRounded from '@material-ui/icons/HomeRounded';
 
 const styles = theme => ({
   root: {
@@ -45,10 +43,14 @@ const styles = theme => ({
     marginTop: 18,
     marginBottom: 18,
     textAlign: 'center',
-    '&.div': {
-      background: 'red',
-      margin: 8
+  },
+  navHoverStyle:  {
+    '&:hover': {
+      color: '#FFB944'
     }
+  },
+  navActiveStyle: {
+    color: '#FFB944'
   }
 });
 
@@ -64,23 +66,41 @@ class Layout extends Component {
 
 
   render() {
-    const { children, classes, theme } = this.props
-    
+    const { children, classes, theme } = this.props;
+
     const drawerMenu = (
       <>
+        {/* Primary Nav */}
         <div className={classes.mainNav}>
-          {['Home', 'About', 'Skill', 'Work', 'Open Source', 'Contact'].map((text, index) => (
-            <div>
-              <HomeRounded style={{ fontSize: 30 }}/>
-            </div>
-          ))}
+          {
+            siteData.primaryMenu.map((menu, index) => (
+              <div key={index} style={{ margin: 8, marginBottom: 14 }}>
+                 <Link href={menu.path}>
+                  <a className={cx(classes.navHoverStyle, {
+                    [classes.navActiveStyle]: children.props.router.pathname === menu.path
+                  })}>
+                    <div>{ menu.icon }</div>
+                    <div style={{ fontSize: 12 }}>{ menu.title }</div>
+                  </a>
+                </Link>
+              </div>
+            ))
+          }
+          
         </div>
-        <div>
-          {['Facebook','Twitter'].map((text, index) => (
-            <div>
-              {text}
-            </div>
-          ))}
+        
+        {/* Social Nav */}
+        <div className={classes.mainNav}>
+          {
+            siteData.socialNav.map((menu, index) => (
+              <div key={index} style={{ margin: 8 }}>
+
+                <a href={menu.url} target="_blank" className={classes.navHoverStyle} >
+                  <div>{ menu.icon }</div>
+                </a>
+              </div>
+            ))
+          }
         </div>
       </>
     );
@@ -88,10 +108,10 @@ class Layout extends Component {
     return (
       
       <section className={classes.root}>
-        <DeleteForeverTwoToneIcon 
+        {/* <DeleteForeverTwoToneIcon 
           onClick={this.handleDrawerToggle}
           className={classes.menuButton}
-          />
+          /> */}
         
         <nav className={classes.drawer}>
           {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -130,6 +150,7 @@ class Layout extends Component {
   }
   
 }
+
 Layout.propTypes = {
   classes: PropTypes.object.isRequired,
   // Injected by the documentation to work in an iframe.

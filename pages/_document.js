@@ -27,8 +27,9 @@ class MyDocument extends Document {
           <link rel="canonical" href={canonical} />
 
           <link rel="stylesheet" href={font} />
-          <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="anonymous" />
-          
+          <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="anonymous" />          
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" />
+
         </Head>
         <body>
           <Main />
