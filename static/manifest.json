@@ -1,33 +1,33 @@
 {
-    "name": "XXX",
-    "short_name": "MUI",
+    "name": "Prince Ali Khan",
+    "short_name": "Prince",
     "display": "minimal-ui",
     "start_url": "/",
-    "theme_color": "#2196f3",
-    "background_color": "#ffffff",
+    "theme_color": "#FFB944",
+    "background_color": "#0f1017",
     "icons": [
         {
-            "src": "/static/icons/logo.png",
+            "src": "/static/icons/favicon-48.png",
             "sizes": "48x48"
         },
         {
-            "src": "/static/icons/logo.png",
+            "src": "/static/icons/favicon-96.png",
             "sizes": "96x96"
         },
         {
-            "src": "/static/icons/logo.png",
+            "src": "/static/icons/favicon-192.png",
             "sizes": "192x192"
         },
         {
-            "src": "/static/icons/logo.png",
+            "src": "/static/icons/favicon-256.png",
             "sizes": "256x256"
         },
         {
-            "src": "/static/icons/logo.png",
+            "src": "/static/icons/favicon-384.png",
             "sizes": "384x384"
         },
         {
-            "src": "/static/icons/logo.png",
+            "src": "/static/icons/favicon-512.png",
             "sizes": "512x512"
         }
     ]

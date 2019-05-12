@@ -54,7 +54,7 @@ const styles = theme => ({
   }
 });
 
-class Layout extends Component {
+class MasterLayout extends Component {
 
   state = {
     mobileOpen: false,
@@ -151,7 +151,7 @@ class Layout extends Component {
   
 }
 
-Layout.propTypes = {
+MasterLayout.propTypes = {
   classes: PropTypes.object.isRequired,
   // Injected by the documentation to work in an iframe.
   // You won't need it on your project.
@@ -159,4 +159,4 @@ Layout.propTypes = {
   theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(Layout);
+export default withStyles(styles, { withTheme: true })(MasterLayout);
