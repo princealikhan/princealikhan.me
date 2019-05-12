@@ -2,7 +2,7 @@ const withPlugins = require('next-compose-plugins');
 const withCSS = require('@zeit/next-css')
 
 const nextConfig = {
-  target: 'server'
+  target: 'serverless'
 };
 
 module.exports = withPlugins([
