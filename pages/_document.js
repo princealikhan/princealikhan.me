@@ -96,6 +96,21 @@ MyDocument.getInitialProps = ctx => {
               `,
           }}
         />
+
+        <script
+          dangerouslySetInnerHTML={{
+              __html: `
+                if('serviceWorker' in navigator) {
+                  navigator.serviceWorker
+                    .register('/static/sw.js')
+                    .then(function() { 
+                      console.log("Service Worker Registered"); 
+                    });
+                }
+              `,
+          }}
+        />
+
         <style
           id="jss-server-side"
           // eslint-disable-next-line react/no-danger

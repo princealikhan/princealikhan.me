@@ -76,7 +76,8 @@ class MasterLayout extends Component {
             siteData.primaryMenu.map((menu, index) => (
               <div key={index} style={{ margin: 8, marginBottom: 14 }}>
                  <Link href={menu.path}>
-                  <a className={cx(classes.navHoverStyle, {
+                  <a aria-label={menu.title} 
+                    className={cx(classes.navHoverStyle, {
                     [classes.navActiveStyle]: children.props.router.pathname === menu.path
                   })}>
                     <div>{ menu.icon }</div>
