@@ -1,10 +1,12 @@
 import { Component } from "react";
 import Link from "next/link";
+import cx from 'classnames';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import { siteData } from '../static/constant';
+import Router from 'next/router';
 
 const drawerWidth = 80;
 
@@ -46,6 +48,9 @@ const styles = theme => ({
     '&:hover': {
       color: '#FFB944'
     }
+  },
+  navActiveStyle: {
+    color: '#FFB944'
   }
 });
 
@@ -69,9 +74,11 @@ class Layout extends Component {
         <div className={classes.mainNav}>
           {
             siteData.primaryMenu.map((menu, index) => (
-              <div key={index} style={{ margin: 8 }}>
+              <div key={index} style={{ margin: 8, marginBottom: 14 }}>
                  <Link href={menu.path}>
-                  <a className={classes.navHoverStyle}>
+                  <a className={cx(classes.navHoverStyle, {
+                    [classes.navActiveStyle]: children.props.router.pathname === menu.path
+                  })}>
                     <div>{ menu.icon }</div>
                     <div style={{ fontSize: 12 }}>{ menu.title }</div>
                   </a>
