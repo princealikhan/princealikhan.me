@@ -2,10 +2,18 @@
     "version":2,
     "name":"princealikhan.me",
     "alias": "princealikhan.me",
-    "builds":[
+    "builds": [
+        { 
+            "src": "next.config.js",
+            "use": "@now/next" 
+        }
+    ],
+    "routes": [
         {
-            "src":"package.json",
-            "use":"@now/next"
+            "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
+            "headers": {
+                "cache-control": "immutable"
+            }
         }
     ]
 }
