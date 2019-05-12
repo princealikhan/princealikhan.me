@@ -1,23 +1,15 @@
 import Link from "next/link";
-import Header from "../components/header";
-import Paper from '@material-ui/core/Paper';
 
 function Index() {
   return (
-    <main className="test">
-      <Header />
-      <section>
-        <img src="/static/logo.png"/>
-        
-        <Link href="/about">
-          <a>Go to sdf Me</a>
+    <main>
+      {/* <strong>{this.props.isServer ? "server" : "client"} side</strong>. */}
+      Home
+        {/* <img src="/static/logo.png" /> */}
 
-        </Link>
-        <button className="ui button">Standard</button>
-        <Paper elevation={1}>
-          <h1>NICE</h1>
-        </Paper>
-      </section>
+      {/* <Link href="/about">
+        <a>About</a>
+      </Link> */}
     </main>
   );
 }

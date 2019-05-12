@@ -7,10 +7,12 @@ export const siteData = {
     primaryMenu: [
         {
             title: 'Home',
+            path: '/',
             icon: (<HomeRounded/>)
         },
         {
             title: 'About',
+            path: '/about',
             icon: (<HomeRounded/>)
         }
     ],
