@@ -46,7 +46,7 @@ class MyApp extends App {
 
             {/* Layout Wrapper */}
             <MasterLayout>
-              <Component pageContext={this.pageContext} {...this.props} />
+              <Component pageContext={this.pageContext} {...this.props} key={router.route}/>
             </MasterLayout>
             {/* End Layout Wrapper */}
 
