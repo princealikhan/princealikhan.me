@@ -15,7 +15,9 @@ const styles = theme => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    height: 'calc(100vh - 48px)'
+    height: 'calc(100vh - 48px)',
+    fontSize: '3em',
+    padding: '1em'
   },
 });
 
@@ -27,18 +29,25 @@ class Index extends Component {
       <div className={'is-row'}>
         <div className={cx('is-col-xs-12', { 'is-col-sm-6': true, 'is-col-md-6': true, 'is-col-lg-6': true })}>
           <div className={classes.centerPane}>
-            <Lottie
-              options={{
-                animationData: LottieLoader,
-                loop: false,
-              }}
-            />
+            <div className={'has-color--yellow has-font-weight--bold'} style={{ fontSize: '2em'}}>Hi,</div>
+            <div className={'has-color--white has-font-weight--bold'}>I'm Prince,</div>
+            <div className={'has-color--white has-font-weight--bold'}>Software Developer,</div>
+            <h4 style={{ margin: 0}}>Based out of Bangalore</h4>
+            <Link href={'/about'}>
+              <a style={{width:120}}>
+                <button className={'ui button outline danger'}>know more</button>
+              </a>
+            </Link>
           </div>
         </div>
       
         <div className={cx('is-col-xs-12', { 'is-col-sm-6': true, 'is-col-md-6': true, 'is-col-lg-6': true, [classes.mobileView]: true})}>
           <div className={classes.centerPane}>
-            B
+            <Lottie
+              options={{
+                animationData: LottieLoader,
+              }}
+            />
           </div>
         </div>
       </div>
