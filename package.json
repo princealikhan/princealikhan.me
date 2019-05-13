@@ -17,6 +17,7 @@
     "@material-ui/icons": "latest",
     "@zeit/next-css": "^1.0.1",
     "jss": "latest",
+    "lottie-react-web": "^2.1.4",
     "next": "^8.0.0",
     "next-compose-plugins": "^2.2.0",
     "react": "^16.7.0",
