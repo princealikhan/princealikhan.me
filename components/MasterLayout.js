@@ -6,7 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import { siteData } from '../static/constant';
-import Router from 'next/router';
+import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 
 const drawerWidth = 80;
 
@@ -29,15 +29,22 @@ const styles = theme => ({
     borderRight: '1px solid #02070e'
   },
   menuButton: {
-    marginRight: 20,
+    margin: 20,
+    position: 'absolute',
     [
-      theme.breakpoints.up('sm')]: {
+      theme.breakpoints.up('sm')
+    ]: {
       display: 'none',
     },
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing.unit * 3,
+    [
+      theme.breakpoints.down('sm')
+    ]: {
+      marginTop: 24,
+    },
   },
   mainNav: {
     marginTop: 18,
@@ -109,10 +116,10 @@ class MasterLayout extends Component {
     return (
       
       <section className={classes.root}>
-        {/* <DeleteForeverTwoToneIcon 
+        <MenuRoundedIcon 
           onClick={this.handleDrawerToggle}
           className={classes.menuButton}
-          /> */}
+          />
         
         <nav className={classes.drawer}>
           {/* The implementation can be swapped with js to avoid SEO duplication of links. */}

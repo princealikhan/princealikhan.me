@@ -14,7 +14,7 @@ export const siteTheme = {
         primary: {
           light: '#A985CF',
           main: '#0a0f14',
-          dark: '#4B2E6F',
+          dark: '#ffcc00',
           contrastText: '#fff',
         },
         secondary: {
@@ -22,6 +22,12 @@ export const siteTheme = {
           main: '#3268B9',
           dark: '#003E88',
           contrastText: '#fff',
+        },
+        text: {
+            primary: "rgba(0, 0, 0, 0.87)",
+            secondary: "rgba(0, 0, 0, 0.54)",
+            disabled: "rgba(0, 0, 0, 0.38)",
+            hint: "rgba(0, 0, 0, 0.38)",
         },
         action: {
             active: "rgba(89,91,94, 0.54)",

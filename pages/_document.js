@@ -96,7 +96,19 @@ MyDocument.getInitialProps = ctx => {
               `,
           }}
         />
-
+        <style dangerouslySetInnerHTML={{
+          __html: `
+          ::-moz-selection { /* Code for Firefox */
+            color: #E3E7EF;
+            background: #FFA4A1;
+          }
+          
+          ::selection {
+            color: #E3E7EF;
+            background: #FFA4A1;
+          }
+          `
+        }} />
         <script
           dangerouslySetInnerHTML={{
               __html: `
