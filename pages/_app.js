@@ -29,7 +29,7 @@ class MyApp extends App {
     return (
       <Container>
         <Head>
-          <title> Personal | Prince Ali Khan</title>
+          <title>Prince Ali Khan | Software Developer</title>
         </Head>
         {/* Wrap every page in Jss and Theme providers */}
         <JssProvider

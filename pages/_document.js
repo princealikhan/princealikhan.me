@@ -67,7 +67,7 @@ MyDocument.getInitialProps = ctx => {
   // Render app and page and get the context of the page with collected side effects.
   let pageContext;
 
-  const GOOGLE_ANALYTICS_ID = process.env.NODE_ENV === 'production' ? 'AAA' : 'BBB';
+  const GOOGLE_ANALYTICS_ID = process.env.NODE_ENV === 'production' ? 'UA-139875827-1' : 'BBB';
 
   const page = ctx.renderPage(Component => {
     const WrappedComponent = props => {

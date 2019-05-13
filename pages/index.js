@@ -7,7 +7,9 @@ import LottieLoader from '../static/animations/loader.json';
 
 const styles = theme => ({
   mobileView: {
-    [theme.breakpoints.down('xs')]: {
+    [
+      theme.breakpoints.down('xs')
+    ]: {
       display: 'none'
     },
   },
@@ -17,7 +19,12 @@ const styles = theme => ({
     justifyContent: 'center',
     height: 'calc(100vh - 48px)',
     fontSize: '3em',
-    padding: '1em'
+    padding: '1em',
+    [
+      theme.breakpoints.down('sm')
+    ]: {
+      height: 'calc(100vh - 72px)',
+    },
   },
 });
 
