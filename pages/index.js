@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Link from "next/link";
 import cx from 'classnames';
 import Lottie from 'lottie-react-web'
-import LottieLoader from '../static/animations/loader.json';
+import HeroImage from '../static/animations/hero.json';
 
 const styles = theme => ({
   mobileView: {
@@ -52,7 +52,7 @@ class Index extends Component {
           <div className={classes.centerPane}>
             <Lottie
               options={{
-                animationData: LottieLoader,
+                animationData: HeroImage,
               }}
             />
           </div>
