@@ -14,6 +14,11 @@ export const siteData = {
             title: 'About',
             path: '/about',
             icon: (<Icon className={'fas fa-info-circle'} style={{ fontSize:20 }}/>)
+        },
+        {
+            title: 'Work',
+            path: '/work',
+            icon: (<Icon className={'fas fa-briefcase'} style={{ fontSize: 20 }} />)
         }
     ],
     socialNav: [
