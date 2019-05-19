@@ -9,6 +9,9 @@ import CardContent from '@material-ui/core/CardContent';
 
 
 const styles = theme => ({
+    container: {
+        padding: theme.spacing.unit * 3,
+    },
     mobileView: {
         [theme.breakpoints.down('xs')]: {
             display: 'none'
@@ -22,7 +25,9 @@ class Work extends Component {
         const { children, classes, theme } = this.props;
         return (
             <>
-            <div className={'is-row'}>
+            <div className={ cx('is-row', {
+                [classes.container]: true
+            }) }>
                 <div className={cx('is-col-xs-12', { 'is-col-sm-12': true, 'is-col-md-12': true, 'is-col-lg-12': true })}>
                     <div style={{ textAlign: 'center',marginTop: '5%'}}>
                         <button style={{ marginRight: 8 }} className={"ui button outline danger is-text--bold	 ripple"}>All</button>
@@ -33,7 +38,9 @@ class Work extends Component {
             </div>
 
             {/* Works */}
-            <div className={'is-row'} style={{marginTop: '5%'}}>
+            <div className={ cx('is-row', {
+                [classes.container]: true
+            }) } style={{marginTop: '5%'}}>
                 <div className={cx('is-col-xs-12', { 'is-col-sm-6': true, 'is-col-md-4': true, 'is-col-lg-3': true })}>
                     <div className={cx('ui card' )}>
                         <div class={cx('cover-image')} style={{ '--bg-image': "url('https://picsum.photos/id/237/200/300')"}}>
