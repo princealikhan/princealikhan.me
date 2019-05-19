@@ -1,6 +1,18 @@
 import { Component } from "react";
-import Link from "next/link";
+import { withStyles } from '@material-ui/core/styles';
 import Head from 'next/head'
+import cx from 'classnames';
+
+const styles = theme => ({
+  container: {
+      padding: theme.spacing.unit * 3,
+  },
+  mobileView: {
+      [theme.breakpoints.down('xs')]: {
+          display: 'none'
+      },
+  },
+});
 
 class AboutPage extends Component {
   
@@ -10,8 +22,12 @@ class AboutPage extends Component {
   }
 
   render() {
+    const { children, classes, theme } = this.props;
+
     return (
-      <main>
+      <main className={ cx('is-row', {
+        [classes.container]: true
+      }) }>
         <Head>
           <title>About</title>
         </Head>
@@ -36,4 +52,4 @@ class AboutPage extends Component {
   }
 }
 
-export default AboutPage;
+export default withStyles(styles, { withTheme: true })(AboutPage);
