@@ -2,6 +2,7 @@ import { Component } from "react";
 import { withStyles } from '@material-ui/core/styles';
 import Link from "next/link";
 import cx from 'classnames';
+import Head from 'next/head'
 
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -25,6 +26,9 @@ class Work extends Component {
         const { children, classes, theme } = this.props;
         return (
             <>
+            <Head>
+                <title>Prince Ali Khan | Work</title>
+            </Head>
             <div className={ cx('is-row', {
                 [classes.container]: true
             }) }>

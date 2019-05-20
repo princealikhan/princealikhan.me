@@ -29,7 +29,7 @@ class AboutPage extends Component {
         [classes.container]: true
       }) }>
         <Head>
-          <title>About</title>
+          <title>Prince Ali Khan | About</title>
         </Head>
         {/* <strong>{this.props.isServer ? "server" : "client"} side</strong>. */}
         <p className={'has-color--yellow'}>
