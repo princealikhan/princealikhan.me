@@ -58,7 +58,7 @@ class Contact extends Component {
                 <div className={'has-color--white has-font-weight--bold'} style={{fontSize: '16px'}}>{siteData.pages.contact.hero.description}</div>
                 <form noValidate autoComplete="off">
                     <div className={'is-row'}>
-                        <div className={cx('is-col-xs-12', { 'is-col-sm-6': true, 'is-col-md-6': true, 'is-col-lg-6': true })}>
+                        <div className={cx('is-col-xs-12', { 'is-col-sm-4': true, 'is-col-md-4': true, 'is-col-lg-4': true })}>
                             <TextField
                                 label="Name"
                                 value={this.state.name}
@@ -67,7 +67,7 @@ class Contact extends Component {
                                 variant="outlined"
                             />
                         </div>
-                        <div className={cx('is-col-xs-12', { 'is-col-sm-6': true, 'is-col-md-6': true, 'is-col-lg-6': true })}>
+                        <div className={cx('is-col-xs-12', { 'is-col-sm-4': true, 'is-col-md-4': true, 'is-col-lg-4': true })}>
                             <TextField
                                 label="Email"
                                 type="email"
@@ -77,7 +77,7 @@ class Contact extends Component {
                                 variant="outlined"
                             />
                         </div>
-                        <div className={cx('is-col-xs-12', { 'is-col-sm-12': true, 'is-col-md-12': true, 'is-col-lg-12': true })}>
+                        <div className={cx('is-col-xs-12', { 'is-col-sm-8': true, 'is-col-md-8': true, 'is-col-lg-8': true })}>
                             <TextField
                                 multiline
                                 rows="4"
@@ -88,11 +88,12 @@ class Contact extends Component {
                                 variant="outlined"
                             />
                         </div>
-
-                        <div className={cx('is-col-xs-4', { 'is-col-sm-4': true, 'is-col-md-4': true, 'is-col-lg-4': true })}>
-                            <button className={'ui button outline danger'} style={{marginTop: '16px'}}>Send</button>
-                        </div>
                     </div>  
+                    <div className={'is-row'}>
+                      <div className={cx('is-col-xs-12', { 'is-col-sm-4': true, 'is-col-md-4': true, 'is-col-lg-4': true })}>
+                          <button className={'ui button outline danger'} style={{marginTop: '16px'}}>Send</button>
+                      </div>
+                    </div>
                 </form>
             </div>
             </div>
