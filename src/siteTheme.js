@@ -1,10 +1,5 @@
 export const siteTheme = {
     overrides: {
-        MuiPaper: {
-            elevation8: {
-                boxShadow: '0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -7px rgba(0,0,0,.2)'
-            }
-        }   
     },
     palette: {
         type: 'dark',
@@ -12,8 +7,8 @@ export const siteTheme = {
             default: "#0f1017"
         },
         primary: {
-          light: '#A985CF',
-          main: '#0a0f14',
+          light: '#FFB944',
+          main: '#FFB944',
           dark: '#ffcc00',
           contrastText: '#fff',
         },
@@ -24,10 +19,10 @@ export const siteTheme = {
           contrastText: '#fff',
         },
         text: {
-            primary: "rgba(0, 0, 0, 0.87)",
-            secondary: "rgba(0, 0, 0, 0.54)",
+            primary: "rgba(255, 185, 68, 0.87)",
+            secondary: "rgba(255, 185, 68, 0.54)",
             disabled: "rgba(0, 0, 0, 0.38)",
-            hint: "rgba(0, 0, 0, 0.38)",
+            hint: "rgba(255, 185, 68, 0.38",
         },
         action: {
             active: "rgba(89,91,94, 0.54)",

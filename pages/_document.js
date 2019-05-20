@@ -31,6 +31,8 @@ class MyDocument extends Document {
           <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="anonymous" />          
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" />
 
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6MPs4rSuBAvOhxhOse1yTEjgLFjuccsM" />
+
         </Head>
         <body>
           <Main />

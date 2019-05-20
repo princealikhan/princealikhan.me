@@ -1,5 +1,4 @@
 import Icon from '@material-ui/core/Icon';
-import HomeRounded from '@material-ui/icons/HomeRounded';
 
 export const siteData = {
     name: 'Prince Ali Khan',
@@ -19,6 +18,11 @@ export const siteData = {
             title: 'Work',
             path: '/work',
             icon: (<Icon className={'fas fa-briefcase'} style={{ fontSize: 20 }} />)
+        },
+        {
+            title: 'Contact',
+            path: '/contact',
+            icon: (<Icon className={'fas fa-envelope'} style={{ fontSize: 20 }} />)
         }
     ],
     socialNav: [
@@ -63,8 +67,8 @@ export const siteData = {
         },
         contact: {
             hero: {
-                header: 'Contact',
-                description: 'Hey, thanks a lot for showing interest in my work. Below you will find some of my work that I loved working on. I hope you like it too.',
+                header: 'Contact Me',
+                description: 'Feel free to drop a message',
             }
         }
     }

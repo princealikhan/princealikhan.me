@@ -1,12 +1,12 @@
 const withPlugins = require('next-compose-plugins');
 const withCSS = require('@zeit/next-css')
+const withImages = require('next-images')
 
 const nextConfig = {
   target: 'serverless'
 };
 
 module.exports = withPlugins([
-  // add plugins here..
   [
     withCSS, {
       cssModules: true,
@@ -16,4 +16,11 @@ module.exports = withPlugins([
       }
     }
   ],
+  [
+    withImages, {
+      webpack(config, options) {
+        return config
+      }
+    }
+  ]
 ], nextConfig);
