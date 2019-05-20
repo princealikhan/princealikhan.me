@@ -2,8 +2,8 @@ import { Component } from "react";
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import cx from 'classnames';
+import Map from "../components/Map";
 import { siteData } from "../static/constant";
-
 
 const styles = theme => ({
   container: {
@@ -29,6 +29,9 @@ const styles = theme => ({
       height: 'calc(100vh - 72px)',
     },
   },
+  map: {
+    height: '100vh',
+  }
 });
 
 class Contact extends Component {
@@ -95,9 +98,9 @@ class Contact extends Component {
             </div>
         
             <div className={cx('is-col-xs-12', { 'is-col-sm-6': true, 'is-col-md-6': true, 'is-col-lg-6': true, [classes.mobileView]: true})}>
-            <div className={classes.centerPane}>
-            dsfk
-            </div>
+              <div className={classes.map}>
+                <Map/>
+              </div>
             </div>
         </div>
         );
