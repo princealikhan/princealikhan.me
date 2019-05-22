@@ -31,7 +31,8 @@ class MyDocument extends Document {
           <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="anonymous" />          
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" />
 
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6MPs4rSuBAvOhxhOse1yTEjgLFjuccsM" />
+          <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" />
+          <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" />
 
         </Head>
         <body>
@@ -98,6 +99,7 @@ MyDocument.getInitialProps = ctx => {
               `,
           }}
         />
+
         <style dangerouslySetInnerHTML={{
           __html: `
           ::-moz-selection { /* Code for Firefox */
@@ -111,6 +113,7 @@ MyDocument.getInitialProps = ctx => {
           }
           `
         }} />
+        
         <script
           dangerouslySetInnerHTML={{
               __html: `

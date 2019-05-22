@@ -31,6 +31,7 @@ const styles = theme => ({
   },
   map: {
     height: '100vh',
+    opacity: '0.5'
   }
 });
 
