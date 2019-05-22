@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Badge" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.1">
+        <g id="Group" transform="translate(11.000000, 21.000000)" fill="#FFFFFF">
+            <path d="M62.9075772,8.03827131 C48.0826051,11.054777 36.9262559,24.1647142 36.9262559,39.8803564 C36.9262559,55.0454732 47.3146725,67.7842453 61.3634303,71.3685972 C55.0510117,75.7295255 47.3946968,78.2836625 39.1418313,78.2836625 C17.5243948,78.2836625 -3.55271368e-15,60.7592677 -3.55271368e-15,39.1418313 C-3.55271368e-15,17.5243948 17.5243948,0 39.1418313,0 C48.0799341,0 56.3183101,2.99588637 62.9075726,8.03827223 Z" id="Combined-Shape"></path>
+            <circle id="Oval" cx="69.5" cy="39.5" r="29.5"></circle>
+        </g>
+    </g>
+</svg>

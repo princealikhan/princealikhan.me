@@ -20,7 +20,7 @@ const styles = theme => ({
         minHeight: '160px',
         backgroundPosition: 'right -12px bottom -18px',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: '50%',
+        backgroundSize: 110,
         padding: '0.625em'
     }
 });
@@ -68,7 +68,7 @@ class Work extends Component {
                     {
                         projects.map((project, index) => (
                             <div key={index} className={cx('is-col-xs-12', { 'is-col-sm-6': true, 'is-col-md-4': true, 'is-col-lg-3': true })}>
-                                <div className={cx('ui card')}>
+                                <div className={cx('ui card')} style={{ marginBottom: 16 }}>
                                     <div className={
                                         cx('gradient linear with shadow has-no--padding', { [project.style.color]: true })} 
                                         style={{ flexDirection: 'column', alignItems: 'inherit'}}>
