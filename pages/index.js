@@ -37,7 +37,7 @@ class Index extends Component {
     const { children, classes, theme } = this.props;
     return (
       <div className={ cx('is-row', {
-          [classes.container]: true
+          
         }) }>
         <div className={cx('is-col-xs-12', { 'is-col-sm-6': true, 'is-col-md-6': true, 'is-col-lg-6': true })}>
           <div className={classes.centerPane}>
@@ -57,11 +57,13 @@ class Index extends Component {
       
         <div className={cx('is-col-xs-12', { 'is-col-sm-6': true, 'is-col-md-6': true, 'is-col-lg-6': true, [classes.mobileView]: true})}>
           <div className={classes.centerPane}>
-            <Lottie
-              options={{
-                animationData: HeroImage,
-              }}
-            />
+            <a href="https://lottiefiles.com/6268-programming" target="_blank">
+              <Lottie
+                options={{
+                  animationData: HeroImage,
+                }}
+              />
+            </a>
           </div>
         </div>
       </div>
