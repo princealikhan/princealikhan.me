@@ -66,7 +66,7 @@ class Work extends Component {
                 })} style={{marginTop: '5%'}}>
                     {
                         projects.map((project, index) => (
-                            <div key={index} className={cx('is-off-xs-12', { 'is-col-sm-6': true, 'is-col-md-4': true, 'is-col-lg-4': true })}>
+                            <div key={index} className={cx('is-off-xs-12', { 'is-col-sm-6': true, 'is-col-md-4': true, 'is-col-lg-3': true })}>
                                  <WorkCard workData={ project }/>
                             </div> 
                         ))

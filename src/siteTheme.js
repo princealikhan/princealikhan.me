@@ -1,5 +1,10 @@
 export const siteTheme = {
     overrides: {
+        MuiPaper: {
+            root: {
+                backgroundColor: '#0a0f14'
+            }
+        }
     },
     palette: {
         type: 'dark',

@@ -16,11 +16,15 @@ import RoundGlassBadge from '../../static/images/roundglass-badge.svg';
 import AwareLogo from '../../static/images/aware-logo.svg';
 import AwareBadge from '../../static/images/aware-badge.svg';
 
+// Technologies
+import FirebaseIcon from '../../static/icons/technology/firebase.svg';
+import ReactIcon from '../../static/icons/technology/react.svg';
+
 export const workData = {
     professional : [
         {
             title: "Lorem Ipsume",
-            shortDesc: "Lromep Ipsuem slset slet hjiks",
+            shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
             orgLogo: RoundGlassLogo,
             cornerBanner: RoundGlassBadge,
             style: {
@@ -29,7 +33,7 @@ export const workData = {
         },
         {
             title: "Lorem Ipsume",
-            shortDesc: "Lromep Ipsuem slset slet hjiks",
+            shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
             orgLogo: OpenSourceLogo,
             cornerBanner: OpenSourceBadge,
             style: {
@@ -37,8 +41,18 @@ export const workData = {
             }
         },
         {
-            title: "Lorem Ipsume",
-            shortDesc: "Lromep Ipsuem slset slet hjiks",
+            title: "Subscription Dashboard",
+            shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+            technologies: [
+                {
+                    icon: FirebaseIcon,
+                    name: "Firebase"
+                },
+                {
+                    icon: ReactIcon,
+                    name: "ReactJS"
+                }
+            ],
             orgLogo: AwareLogo,
             cornerBanner: AwareBadge,
             style: {
@@ -47,7 +61,7 @@ export const workData = {
         },
         {
             title: "Lorem Ipsume",
-            shortDesc: "Lromep Ipsuem slset slet hjiks",
+            shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
             orgLogo: OpenSourceLogo,
             cornerBanner: ElegantBadge,
             style: {
@@ -56,7 +70,7 @@ export const workData = {
         },
         {
             title: "Lorem Ipsume",
-            shortDesc: "Lromep Ipsuem slset slet hjiks",
+            shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
             orgLogo: EduLogo,
             cornerBanner: EduBadge,
             style: {
@@ -67,7 +81,7 @@ export const workData = {
     openSource: [
         {
             title: "Ipsume Lorem",
-            shortDesc: "Lromep Ipsuem slset slet hjiks",
+            shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
             orgLogo: ZjbLogo,
             cornerBanner: ZjbBadge,
             style: {
