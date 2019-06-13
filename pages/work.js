@@ -27,20 +27,38 @@ const styles = theme => ({
 
 class Work extends Component {
 
+    
     state = {
-        projects: []
+        projects: [],
+        active: ''
+    }
+
+    handleTypeToggle = (type) => {
+        if(type === 'all'){
+            this.setState({
+                projects: workData.professional.concat(workData.openSource),
+                active: 'all'
+            })
+        }else {
+            this.setState({
+                projects: workData[type],
+                active: type
+            })
+        }
+        
     }
 
     componentDidMount(){
         this.setState({
-            projects: workData.professional.concat(workData.openSource)
+            projects: workData.professional.concat(workData.openSource),
+            active: 'all'
         })
     }
 
     render() {
 
         const { children, classes, theme } = this.props;
-        const { projects } = this.state;
+        const { projects, active } = this.state;
 
         return (
             <section className={classes.workArea}>
@@ -53,9 +71,23 @@ class Work extends Component {
                 })}>
                     <div className={cx('is-col-xs-12', { 'is-col-sm-12': true, 'is-col-md-12': true, 'is-col-lg-12': true })}>
                         <div style={{ textAlign: 'center',marginTop: '5%'}}>
-                            <button style={{ marginRight: 8 }} className={"ui button outline danger is-text--bold	 ripple"}>All</button>
-                            <button style={{ marginRight: 8 }} className={"ui button outline danger ripple"}>Professional</button>
-                            <button className={"ui button outline danger ripple"}>Open Source</button>
+                            <button 
+                                onClick={this.handleTypeToggle.bind(this, 'all')} 
+                                style={{ marginRight: 8 }}
+                                className={cx('ui button danger is-text--bold ripple', { 'outline': active !== 'all' })}>
+                                All
+                            </button>
+                            <button 
+                                onClick={this.handleTypeToggle.bind(this, 'professional')} 
+                                style={{ marginRight: 8 }} 
+                                className={cx('ui button danger is-text--bold ripple', { 'outline': active !== 'professional' })}>
+                                Professional
+                            </button>
+                            <button 
+                                onClick={this.handleTypeToggle.bind(this, 'openSource')} 
+                                className={cx('ui button danger ripple', { 'outline': active !== 'openSource' })}>
+                                Open Source
+                            </button>
                         </div>
                     </div>
                 </div>
