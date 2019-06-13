@@ -110,24 +110,33 @@ class WorkCard extends Component {
                     </Typography>
                     
                     {/* Technologies */}
-                    <Typography variant="h6" style={{ marginTop: 18, fontSize: 16}}>Technologies Used</Typography>
-                    <div className={classes.technologies}>
-                        {
-                            workData.technologies && workData.technologies.length > 0 ?
-                            workData.technologies.map((technology, index) => (
-                                <Tooltip key={index} title={technology.name} aria-label={technology.name}>
-                                    <img className={classes.technologiesImages} aria-label={technology.name} src={technology.icon}/>
-                                </Tooltip>
-                            )):
-                            ""
-                        }
-                    </div>
+                    {
+                        workData.technologies && workData.technologies.length > 0 ?
+                        <>
+                            <Typography variant="h6" style={{ marginTop: 18, marginBottom: 8, fontSize: 16}}>
+                                Technologies Used
+                            </Typography>
+                            <div className={classes.technologies}>
+                            {
+                                workData.technologies && workData.technologies.length > 0 ?
+                                workData.technologies.map((technology, index) => (
+                                    <Tooltip key={index} title={technology.name} aria-label={technology.name}>
+                                        <img className={classes.technologiesImages} aria-label={technology.name} src={technology.icon}/>
+                                    </Tooltip>
+                                )):
+                                ""
+                            }
+                            </div> 
+                        </>:
+                        ""
+                    }
+                    
                 </DialogContent>
 
                 <DialogActions>
-                <Button onClick={this.handleClose} color="primary">
-                Save changes
-                </Button>
+                    <Button onClick={this.handleClose} color="primary">
+                        Save changes
+                    </Button>
                 </DialogActions>
             </Dialog>
         );
