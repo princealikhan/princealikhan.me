@@ -2,49 +2,66 @@ import { Component } from "react";
 import Head from 'next/head'
 import { withStyles } from '@material-ui/core/styles';
 import cx from 'classnames';
+import WorkCard from '../components/WorkCard';
 import { workData } from "../src/data/work";
 
 const styles = theme => ({
     container: {
         padding: theme.spacing.unit * 3,
     },
+    workArea: {
+        marginRight: '8%',
+        marginLeft: '8%',
+        [theme.breakpoints.down('xs')]: {
+            marginLeft: 'inherit',
+            marginRight: 'inherit'
+        },
+    },
     mobileView: {
         [theme.breakpoints.down('xs')]: {
             display: 'none'
         },
-    },
-    cardContent: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        minHeight: '160px',
-        backgroundPosition: 'right -12px bottom -18px',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 110,
-        padding: '0.625em'
     }
 });
 
 
 class Work extends Component {
 
+    
     state = {
-        projects: []
+        projects: [],
+        active: ''
+    }
+
+    handleTypeToggle = (type) => {
+        if(type === 'all'){
+            this.setState({
+                projects: workData.professional.concat(workData.openSource),
+                active: 'all'
+            })
+        }else {
+            this.setState({
+                projects: workData[type],
+                active: type
+            })
+        }
+        
     }
 
     componentDidMount(){
         this.setState({
-            projects: workData.professional.concat(workData.openSource)
+            projects: workData.professional.concat(workData.openSource),
+            active: 'all'
         })
     }
 
     render() {
 
         const { children, classes, theme } = this.props;
-        const { projects } = this.state;
+        const { projects, active } = this.state;
 
         return (
-            <>
+            <section className={classes.workArea}>
                 <Head>
                     <title>Prince Ali Khan | Work</title>
                 </Head>
@@ -54,9 +71,23 @@ class Work extends Component {
                 })}>
                     <div className={cx('is-col-xs-12', { 'is-col-sm-12': true, 'is-col-md-12': true, 'is-col-lg-12': true })}>
                         <div style={{ textAlign: 'center',marginTop: '5%'}}>
-                            <button style={{ marginRight: 8 }} className={"ui button outline danger is-text--bold	 ripple"}>All</button>
-                            <button style={{ marginRight: 8 }} className={"ui button outline danger ripple"}>Professional</button>
-                            <button className={"ui button outline danger ripple"}>Open Source</button>
+                            <button 
+                                onClick={this.handleTypeToggle.bind(this, 'all')} 
+                                style={{ marginRight: 8 }}
+                                className={cx('ui button danger is-text--bold ripple', { 'outline': active !== 'all' })}>
+                                All
+                            </button>
+                            <button 
+                                onClick={this.handleTypeToggle.bind(this, 'professional')} 
+                                style={{ marginRight: 8 }} 
+                                className={cx('ui button danger is-text--bold ripple', { 'outline': active !== 'professional' })}>
+                                Professional
+                            </button>
+                            <button 
+                                onClick={this.handleTypeToggle.bind(this, 'openSource')} 
+                                className={cx('ui button danger ripple', { 'outline': active !== 'openSource' })}>
+                                Open Source
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -67,27 +98,13 @@ class Work extends Component {
                 })} style={{marginTop: '5%'}}>
                     {
                         projects.map((project, index) => (
-                            <div key={index} className={cx('is-col-xs-12', { 'is-col-sm-6': true, 'is-col-md-4': true, 'is-col-lg-3': true })}>
-                                <div className={cx('ui card')} style={{ marginBottom: 16 }}>
-                                    <div className={
-                                        cx('gradient linear with shadow has-no--padding', { [project.style.color]: true })} 
-                                        style={{ flexDirection: 'column', alignItems: 'inherit'}}>
-                                        <div className={classes.cardContent} style={{ backgroundImage: `url(${project.cornerBanner})` }}>
-                                            <div style={{textAlign: 'right'}}>
-                                                <img src={project.orgLogo} />
-                                            </div>
-                                            <div>
-                                                <h3 className={cx('has-no--margin is-text--bolder')}>{ project.title }</h3>
-                                                <h5 className={cx('has-no--margin is-text--bolder')}>{ project.shortDesc }</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
+                            <div key={index} className={cx('is-off-xs-12', { 'is-col-sm-6': true, 'is-col-md-4': true, 'is-col-lg-3': true })}>
+                                 <WorkCard workData={ project }/>
                             </div> 
                         ))
                     }
                 </div>
-            </>
+            </section>
         );
     }
 }
