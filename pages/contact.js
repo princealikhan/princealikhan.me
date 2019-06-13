@@ -3,7 +3,6 @@ import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import cx from 'classnames';
 import Map from "../components/Map";
-import { siteData } from "../static/constant";
 
 const styles = theme => ({
   container: {
@@ -55,8 +54,12 @@ class Contact extends Component {
         <div className={'is-row'}>
           <div className={cx('is-col-xs-12', { 'is-col-sm-6': true, 'is-col-md-6': true, 'is-col-lg-6': true })}>
             <div className={cx(classes.centerPane, {[classes.container]: true })} >
-                <div className={'has-color--yellow has-font-weight--bold'} >{siteData.pages.contact.hero.header}</div>
-                <div className={'has-color--white has-font-weight--bold'} style={{fontSize: '16px'}}>{siteData.pages.contact.hero.description}</div>
+                <div className={'has-color--yellow has-font-weight--bold'}>
+                  Contact Me
+                </div>
+                <div className={'has-color--white has-font-weight--bold'} style={{fontSize: '16px'}}>
+                  Feel free to drop a message
+                </div>
                 <form noValidate autoComplete="off">
                     <div className={'is-row'}>
                         <div className={cx('is-col-xs-12', { 'is-col-sm-4': true, 'is-col-md-4': true, 'is-col-lg-4': true })}>
