@@ -1,8 +1,64 @@
 import Icon from '@material-ui/core/Icon';
 
+import PHP from '../static/icons/technology/php.svg';
+import JAVASCRIPT from '../static/icons/technology/javascript.svg';
+import MYSQL from '../static/icons/technology/mysql.svg';
+import CSS from '../static/icons/technology/css.svg';
+import SCSS from '../static/icons/technology/scss.svg';
+import HTML from '../static/icons/technology/html.svg';
+import TYPESCRIPT from '../static/icons/technology/typescript.svg';
+
+import REACT from '../static/icons/technology/react.svg';
+import LARAVEL from '../static/icons/technology/laravel.svg';
+import FIREBASE from '../static/icons/technology/firebase.svg';
+
 export const siteData = {
     name: 'Prince Ali Khan',
     email: 'princealikhan08@gmail.com',
+    languages: [
+        {
+            technology: 'Javascript',
+            icon: JAVASCRIPT
+        },
+        {
+            technology: 'TypeScript',
+            icon: TYPESCRIPT
+        },
+        {
+            technology: 'PHP',
+            icon: PHP
+        },
+        {
+            technology: 'MySql',
+            icon: MYSQL
+        },
+        {
+            technology: 'SCSS',
+            icon: SCSS
+        },
+        {
+            technology: 'HTML',
+            icon: HTML
+        },
+        {
+            technology: 'CSS',
+            icon: CSS
+        },
+    ],
+    tools: [
+        {
+            technology: 'React',
+            icon: REACT
+        },
+        {
+            technology: 'Laravel',
+            icon: LARAVEL
+        },
+        {
+            technology: 'Firebase',
+            icon: FIREBASE
+        },
+    ],
     primaryMenu: [
         {
             title: 'Home',
@@ -42,34 +98,5 @@ export const siteData = {
             icon: (<Icon className={'fab fa-behance'} style={{ fontSize:14 }} />),
             url: 'https://www.behance.net/princealikhan',
         }
-    ],
-    pages: {
-        about: {
-            hero: {
-                header: 'About',
-                description: 'Hey, thanks a lot for showing interest in my work. Below you will find some of my work that I loved working on. I hope you like it too.',
-            }
-        },
-        experience: {
-            hero: {
-                header: 'Work Experience',
-                description: 'I am a passionate (and hence a) self taught artist. Along with a full time job as Client Engagament Manager at a Corporate Wellness company called Zoojoo.be, I also maintain time to build and expand my skillset in the design field. Over the last one year, I have worked on a couple of UI & UX projects on the side. I also own an Instagram comic page that translates my daily experiences into funny webcomics. You can download my resume here for a detailed understanding of my experience.',
-                cta: {
-                    text: 'Download',
-                }
-            }
-        },
-        work: {
-            hero: {
-                header: 'Work',
-                description: 'Hey, thanks a lot for showing interest in my work. Below you will find some of my work that I loved working on. I hope you like it too.',
-            }
-        },
-        contact: {
-            hero: {
-                header: 'Contact Me',
-                description: 'Feel free to drop a message',
-            }
-        }
-    }
+    ]
 }

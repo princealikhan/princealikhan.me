@@ -2,6 +2,10 @@ import { Component } from "react";
 import { withStyles } from '@material-ui/core/styles';
 import Head from 'next/head'
 import cx from 'classnames';
+import { siteData } from "../static/constant";
+import Chip from '@material-ui/core/Chip';
+import Avatar from '@material-ui/core/Avatar';
+import Divider from '@material-ui/core/Divider';
 
 const styles = theme => ({
   container: {
@@ -9,9 +13,15 @@ const styles = theme => ({
   },
   mobileView: {
       [theme.breakpoints.down('xs')]: {
-          display: 'none'
+          marginTop: 24
       },
   },
+  chip: {
+    color: '#ffb944',
+    fontWeight: 'bold',
+    marginBottom: 8,
+    marginRight: 8
+  }
 });
 
 class AboutPage extends Component {
@@ -25,29 +35,66 @@ class AboutPage extends Component {
     const { children, classes, theme } = this.props;
 
     return (
-      <main className={ cx('is-row', {
+      <div className={ cx('is-row', {
         [classes.container]: true
-      }) }>
+      })}>
         <Head>
           <title>Prince Ali Khan | About</title>
         </Head>
-        {/* <strong>{this.props.isServer ? "server" : "client"} side</strong>. */}
-        <p className={'has-color--yellow'}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-      </main>
+        <div className={cx('is-col-xs-12', { 'is-col-sm-6': true, 'is-col-md-8': true, 'is-col-lg-8': true })}>
+          {/* <h3 className={'has-color--white has-font-weight--bold'}>Software Developer,</h3> */}
+          <div id="about" style={{ marginTop: 48}}> 
+            <h1 style={{ marginBottom: 0}} className={'has-color--yellow has-font-weight--bold'}>
+              About 🤴
+            </h1>
+            <div className={'has-color--gray'} style={{fontSize: '16px'}}>
+            I'm an enthusiastic web developer --- currently dealing with backed of zoojoo.be and sometimes play with servers ---surrounded with awesome people who build awesomesauce product - when I am not baking <b>code</b> then I am grabbing the beer with my friend.
+
+
+            </div>
+            
+          </div>
+        </div>
+        <div className={cx('is-col-xs-12', { 'is-col-sm-6': true, 'is-col-md-4': true, 'is-col-lg-4': true, [classes.mobileView]: true})}>
+          
+        <div id="skills" style={{ marginTop: 48}}>
+          <h3 style={{ marginBottom: 0}} className={'has-color--white has-font-weight--bold'}>
+            Programming Languages
+          </h3>
+          <Divider style={{ marginTop:8,marginBottom: 12}}/>
+          {
+            siteData.languages.map((language, index) => (
+                <Chip 
+                  key={index}
+                  color="secondary" 
+                  avatar={<Avatar alt={language.technology} src={language.icon} />}
+                  label={language.technology}
+                  className={classes.chip}
+                />
+            ))
+          }
+        </div>
+
+        <div id="tools" style={{ marginTop: 48}}>
+          <h3 style={{ marginBottom: 0}} className={'has-color--white has-font-weight--bold'}>
+            Tools & Frameworks
+          </h3>
+          <Divider style={{ marginTop:8,marginBottom: 12}}/>
+          {
+            siteData.tools.map((tool, index) => (
+                <Chip 
+                  key={index}
+                  color="secondary" 
+                  avatar={<Avatar alt={tool.technology} src={tool.icon} />}
+                  label={tool.technology}
+                  className={classes.chip}
+                />
+            ))
+          }
+        </div>
+
+        </div>
+      </div>
     );
   }
 }
