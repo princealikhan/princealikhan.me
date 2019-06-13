@@ -34,10 +34,10 @@ export const workData = {
         {
             title: "Lorem Ipsume",
             shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-            orgLogo: OpenSourceLogo,
-            cornerBanner: OpenSourceBadge,
+            orgLogo: ZjbLogo,
+            cornerBanner: ZjbBadge,
             style: {
-                color: 'gray'
+                color: 'yellow'
             }
         },
         {
@@ -62,15 +62,6 @@ export const workData = {
         {
             title: "Lorem Ipsume",
             shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-            orgLogo: OpenSourceLogo,
-            cornerBanner: ElegantBadge,
-            style: {
-                color: 'gray'
-            }
-        },
-        {
-            title: "Lorem Ipsume",
-            shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
             orgLogo: EduLogo,
             cornerBanner: EduBadge,
             style: {
@@ -80,13 +71,22 @@ export const workData = {
     ],
     openSource: [
         {
-            title: "Ipsume Lorem",
+            title: "Lorem Ipsume",
             shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-            orgLogo: ZjbLogo,
-            cornerBanner: ZjbBadge,
+            orgLogo: OpenSourceLogo,
+            cornerBanner: OpenSourceBadge,
             style: {
-                color: 'yellow'
+                color: 'gray'
             }
-        }
+        },
+        {
+            title: "Lorem Ipsume",
+            shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+            orgLogo: OpenSourceLogo,
+            cornerBanner: ElegantBadge,
+            style: {
+                color: 'gray'
+            }
+        },
     ]
 }
