@@ -82,7 +82,7 @@ export const workData = {
         {
             title: "Lorem Ipsume",
             shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-            orgLogo: OpenSourceLogo,
+            orgLogo: ElegantLogo,
             cornerBanner: ElegantBadge,
             style: {
                 color: 'gray'
