@@ -24,6 +24,9 @@ import AWS from '../static/icons/technology/aws.svg';
 import DOCKER from '../static/icons/technology/docker.svg';
 import VAGRANT from '../static/icons/technology/vagrant.svg';
 
+import ZjbLogo from '../static/images/zjb-logo.svg';
+import EduLogo from '../static/images/edumob-logo.svg';
+import RoundGlassLogo from '../static/images/roundglass-logo.svg';
 
 export const siteData = {
     name: 'Prince Ali Khan',
@@ -158,6 +161,23 @@ export const siteData = {
         {
             icon: (<Icon className={'fab fa-behance'} style={{ fontSize:14 }} />),
             url: 'https://www.behance.net/princealikhan',
+        }
+    ],
+    experiences: [
+        {
+            desg: "Software Engineer",
+            logo: (<img src={RoundGlassLogo} alt="RoundGlass"/>),
+            description: 'In RoundGlass I\'m responsible for the front-end part of REACH web app.  ',
+        },
+        {
+            desg: "Software Engineer",
+            logo: (<img src={ZjbLogo} alt="Zoojoo.BE"/>),
+            description: 'At Zoojoo.BE, an employee wellness platform, I involved In backend development, In a typical day, I develop API, provide solutions for complex computer science problem, make a data-driven decision and had a lot of fun.',
+        },
+        {
+            desg: "Co-Founder",
+            logo: (<img src={EduLogo} alt="Edumob"/>),
+            description: 'I was responsible for the technical aspect of Edumob where we build a SaaS-based platform for women to get back to their careers in the Technology sector. We provide structured mentoring sessions, free E-learning courses, live support, certification and job placement assistance.',
         }
     ]
 }
