@@ -54,7 +54,6 @@ class Contact extends Component {
 
     render() {
         const { children, classes, theme } = this.props;
-        console.log(this.state)
         return (
         <div className={'is-row'}>
           <div className={cx('is-col-xs-12', { 'is-col-sm-6': true, 'is-col-md-6': true, 'is-col-lg-6': true })}>
