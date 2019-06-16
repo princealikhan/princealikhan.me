@@ -159,7 +159,7 @@ export const workData = {
                     name: "Docker"
                 }
             ],
-            link: 'https://packagist.org/packages/princealikhan/paytm-payment',
+            link: 'https://github.com/princealikhan/devdock',
             style: {
                 color: 'gray with-shadow'
             }
