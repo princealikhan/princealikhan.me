@@ -99,7 +99,7 @@ class AboutPage extends Component {
       <Stepper orientation="vertical">
         {
           siteData.experiences.map((experience, index) => (
-            <Step active={true}>
+            <Step key={index} active={true}>
               <StepLabel
                 classes={
                   {
