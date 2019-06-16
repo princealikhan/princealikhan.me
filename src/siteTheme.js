@@ -1,5 +1,15 @@
 export const siteTheme = {
     overrides: {
+        MuiPaper: {
+            root: {
+                backgroundColor: '#0a0f14'
+            }
+        },
+        MuiChip: {
+            avatarColorSecondary: {
+                padding: 4
+            }
+        }
     },
     palette: {
         type: 'dark',
@@ -13,9 +23,9 @@ export const siteTheme = {
           contrastText: '#fff',
         },
         secondary: {
-          light: '#6B95EC',
-          main: '#3268B9',
-          dark: '#003E88',
+          light: '#C7D4E7',
+          main: '#4E535A',
+          dark: '#262b31',
           contrastText: '#fff',
         },
         text: {
