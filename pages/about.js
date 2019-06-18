@@ -40,6 +40,13 @@ const styles = theme => ({
   stepLabel: {
     fontSize: 16,
     fontWeight: 'bold !important'
+  },
+  experience: {
+    [theme.breakpoints.down('xs')]: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      flexDirection: 'column-reverse'
+    }
   }
   
 });
@@ -110,7 +117,7 @@ class AboutPage extends Component {
                 { experience.desg }
               </StepLabel>
               <StepContent>
-                <div style={{ display: 'flex'}}>
+                <div className={classes.experience} style={{ display: 'flex'}}>
                   <div className={'has-color--white'} style={{ flex: 1, marginRight: 24}}>
                     { experience.description }
                   </div>

@@ -42,7 +42,7 @@ import DOCKER from '../../static/icons/technology/docker.svg';
 import VAGRANT from '../../static/icons/technology/vagrant.svg';
 
 export const workData = {
-    professional : [
+    professional: [
         // {
         //     title: "Lorem Ipsume",
         //     shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
@@ -50,15 +50,6 @@ export const workData = {
         //     cornerBanner: RoundGlassBadge,
         //     style: {
         //         color: 'red'
-        //     }
-        // },
-        // {
-        //     title: "Lorem Ipsume",
-        //     shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-        //     orgLogo: ZjbLogo,
-        //     cornerBanner: ZjbBadge,
-        //     style: {
-        //         color: 'yellow'
         //     }
         // },
         {
@@ -91,18 +82,87 @@ export const workData = {
             orgLogo: AwareLogo,
             cornerBanner: AwareBadge,
             style: {
-                color: 'blue with-shadow'
+                color: 'blue'
             }
         },
-        // {
-        //     title: "Lorem Ipsume",
-        //     shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-        //     orgLogo: EduLogo,
-        //     cornerBanner: EduBadge,
-        //     style: {
-        //         color: 'green'
-        //     }
-        // }
+        {
+            title: "Sales website",
+            shortDesc: "Created a sales website for Zoojoo.BE...",
+            longDesc: "Created a sales website for Zoojoo.BE to showcase product potential, what value it proposing and generate leads.",
+            technologies: [
+                {
+                    icon: WORDPRESS,
+                    name: "wordpress"
+                }
+            ],
+            link: 'https://www.zoojoo.be',
+            orgLogo: ZjbLogo,
+            cornerBanner: ZjbBadge,
+            style: {
+                color: 'yellow'
+            }
+        },
+        {
+            title: "Sales website",
+            shortDesc: "Created a sales website for Aware",
+            longDesc: "Created a website for Aware to promote app explain the science behind meditation and sharing helpful short digestible content to be mindful.",
+            technologies: [
+                {
+                    icon: WORDPRESS,
+                    name: "wordpress"
+                }
+            ],
+            link: 'https://awaremeditationapp.com',
+            orgLogo: AwareLogo,
+            cornerBanner: AwareBadge,
+            style: {
+                color: 'blue'
+            }
+        },
+        {
+            title: "e-Learning Platform",
+            shortDesc: "Built an e-Learning platform for women to get back to their career.",
+            longDesc: "I was responsible for the technical aspect of Edumob where we build a SaaS-based platform for women to get back to their careers in the Technology sector. We provide structured mentoring sessions, free E-learning courses, live support, certification and job placement assistance. I was completely accountable for every single piece of technology from the backend to frontend.",
+            technologies: [
+                {
+                    icon: LARAVEL,
+                    name: "Laravel"
+                },
+                {
+                    icon: PHP,
+                    name: "PHP"
+                },
+                {
+                    icon: MYSQL,
+                    name: "mysql"
+                },
+                {
+                    icon: HTML,
+                    name: "HTML"
+                },
+                {
+                    icon: CSS,
+                    name: "CSS"
+                },
+                {
+                    icon: JAVASCRIPT,
+                    name: "Javascript"
+                },
+                {
+                    icon: ANGULAR,
+                    name: "Angular"
+                },
+                {
+                    icon: WEBPACK,
+                    name: "Webpack"
+                },
+            ],
+            orgLogo: EduLogo,
+            cornerBanner: EduBadge,
+            style: {
+                color: 'green'
+            }
+        }
     ],
     openSource: [
         {
@@ -127,7 +187,7 @@ export const workData = {
             ],
             link: 'https://elegant.surge.sh',
             style: {
-                color: 'gray with-shadow'
+                color: 'gray'
             }
         },
         {
@@ -144,7 +204,7 @@ export const workData = {
             ],
             link: 'https://packagist.org/packages/princealikhan/laravel-mautic-api',
             style: {
-                color: 'gray with-shadow'
+                color: 'gray'
             }
         },
         {
@@ -161,7 +221,7 @@ export const workData = {
             ],
             link: 'https://packagist.org/packages/princealikhan/paytm-payment',
             style: {
-                color: 'gray with-shadow'
+                color: 'gray'
             }
         },
         {
@@ -178,7 +238,7 @@ export const workData = {
             ],
             link: 'https://packagist.org/packages/princealikhan/paytm-payment',
             style: {
-                color: 'gray with-shadow'
+                color: 'gray'
             }
         },
     ]
