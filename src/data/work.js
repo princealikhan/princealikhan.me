@@ -77,6 +77,60 @@ export const workData = {
             }
         },
         {
+            title: "Application Backend API",
+            shortDesc: "Created complete backed API for Zoojoo.Be platform from scratch.",
+            longDesc: "Created complete backend API for Zoojoo.Be platform from scratch which includes from auth service to habit formation algorithm to name few.",
+            technologies: [
+                {
+                    icon: LARAVEL,
+                    name: "Laravel"
+                },
+                {
+                    icon: PHP,
+                    name: "PHP"
+                },
+                {
+                    icon: MYSQL,
+                    name: "mysql"
+                },
+            ],
+            link: 'https://appzoojoo.be',
+            orgLogo: ZjbLogo,
+            cornerBanner: ZjbBadge,
+            style: {
+                color: 'yellow'
+            }
+        },
+        {
+            title: "Application Frontend",
+            shortDesc: " Developed the web front end for Zoojoo.BE WebApp using ReactJS",
+            longDesc: "Contributed in frontend application of Zoojoo.Be using ReactJ. Some features to name dashboard, social, journey, event and team.",
+            technologies: [
+                {
+                    icon: REACT,
+                    name: "ReactJS"
+                },
+                {
+                    icon: HTML,
+                    name: "Html"
+                },
+                {
+                    icon: SCSS,
+                    name: "SCSS"
+                },
+                {
+                    icon: CSS,
+                    name: "CSS"
+                }
+            ],
+            link: 'https://appzoojoo.be',
+            orgLogo: ZjbLogo,
+            cornerBanner: ZjbBadge,
+            style: {
+                color: 'yellow'
+            }
+        },
+        {
             title: "Subscription Dashboard",
             shortDesc: "Recurring Subscription management dashboard for aware app.",
             longDesc: "Aware is a mindfulness meditation mobile app which provides guided meditation sessions to users. Developed the web front end for Aware Dashboard using ReactJS. Some of the features of this dashboard include User Profile, App related stats, Coupon redemption, Gifting module and Payment gateway integration using Paddle.",
