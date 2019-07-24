@@ -43,15 +43,39 @@ import VAGRANT from '../../static/icons/technology/vagrant.svg';
 
 export const workData = {
     professional: [
-        // {
-        //     title: "Lorem Ipsume",
-        //     shortDesc: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
-        //     orgLogo: RoundGlassLogo,
-        //     cornerBanner: RoundGlassBadge,
-        //     style: {
-        //         color: 'red'
-        //     }
-        // },
+        {
+            title: "Reach WebApp",
+            shortDesc: "WebApp Application for general wellbeing platform",
+            longDesc: "Created a webapp for wellbeing platform which provide solution in clinical,chronic and other health aspect. I was responsible for the frontend aspect of platform.",
+            technologies: [
+                {
+                    icon: ANGULAR,
+                    name: "Angular"
+                },
+                {
+                    icon: TYPESCRIPT,
+                    name: "Typescript"
+                },
+                {
+                    icon: HTML,
+                    name: "Html"
+                },
+                {
+                    icon: SCSS,
+                    name: "SCSS"
+                },
+                {
+                    icon: CSS,
+                    name: "CSS"
+                }
+            ],
+            link: 'https://rgreach.com',
+            orgLogo: RoundGlassLogo,
+            cornerBanner: RoundGlassBadge,
+            style: {
+                color: 'red'
+            }
+        },
         {
             title: "Subscription Dashboard",
             shortDesc: "Recurring Subscription management dashboard for aware app.",
@@ -187,7 +211,7 @@ export const workData = {
             ],
             link: 'https://elegant.surge.sh',
             style: {
-                color: 'gray'
+                color: 'purple'
             }
         },
         {
@@ -204,7 +228,7 @@ export const workData = {
             ],
             link: 'https://packagist.org/packages/princealikhan/laravel-mautic-api',
             style: {
-                color: 'gray'
+                color: 'purple'
             }
         },
         {
@@ -221,7 +245,7 @@ export const workData = {
             ],
             link: 'https://packagist.org/packages/princealikhan/paytm-payment',
             style: {
-                color: 'gray'
+                color: 'purple'
             }
         },
         {
@@ -238,7 +262,7 @@ export const workData = {
             ],
             link: 'https://packagist.org/packages/princealikhan/paytm-payment',
             style: {
-                color: 'gray'
+                color: 'purple'
             }
         },
     ]
