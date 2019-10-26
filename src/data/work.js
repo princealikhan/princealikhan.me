@@ -103,7 +103,7 @@ export const workData = {
         },
         {
             title: "Application Frontend",
-            shortDesc: " Developed the web front end for Zoojoo.BE WebApp using ReactJS",
+            shortDesc: "Developed the web front end for Zoojoo.BE WebApp using ReactJS",
             longDesc: "Contributed in frontend application of Zoojoo.Be using ReactJ. Some features to name dashboard, social, journey, event and team.",
             technologies: [
                 {
